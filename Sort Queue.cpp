@@ -88,24 +88,12 @@ char Queue :: dequeue ()
 char Queue :: topDisplay ()
 {
         temp = front;
-        char deletedData;
+        char topData == NULL;
         if (front == NULL)
         cout<<"Queue is empty!!" << endl;
-        else if (temp->next != NULL) 
-        {
-            temp = temp->next;
-            deletedData = front -> data;
-            delete (front);
-            front = temp;
-        }
         else 
-        {
-            deletedData = front->data;
-            delete (front);
-            front = NULL;
-            rear = NULL;
-        }
-        return deletedData;
+            topData = front -> data;
+        return topData;
     }
 
 
@@ -115,7 +103,15 @@ int main()
     string s = "zhYauc@MapaOwp!";
     int size = 0;
     
-    for(int i = 0; i <= size; i++){
+    for(int i = 0; i <= s.length; i++){
+        for(int j = 0; j <= size; j++){
+            if(q.topDisplay() == NULL)
+                q.dequeue(s[i]);
+            else if(){
+                
+            }        
+        }
+        
         
     }
     
